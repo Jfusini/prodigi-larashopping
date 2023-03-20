@@ -19,7 +19,7 @@ class CategorySeeder extends Seeder
   public function run(): void
     {
         foreach($this->categories as $category){
-            Category::create(["name"=>$category['name']]);
+            Category::create(["name"=>$category['name'], "id"=>$category['id']]);
         }
     }
 }
