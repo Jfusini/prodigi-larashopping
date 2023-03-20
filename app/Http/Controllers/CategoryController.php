@@ -32,21 +32,21 @@ class CategoryController extends Controller
         return redirect(route('categories.index'))->with('message', 'Categoria creata con successo');
     }
 
-    public function show(Products $products)
+    public function show(Categories $categories)
     {
-        return view('categories.show', ["category"=>$category]);
+        return view('category.show', ["category"=>$category]);
     }
-    public function edit(Products $products)
+    public function edit(Categories $categories)
     {
-        return view('categories.edit',["category"=>$category]);
+        return view('category.edit',["category"=>$category]);
     }
 
-    public function update(Request $request, Products $products)
+    public function update(Request $request, Categories $categories)
     {
         //
     }
 
-    public function destroy(Products $products)
+    public function destroy(Categories $categories)
     {
         //
     }
